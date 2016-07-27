@@ -34,6 +34,11 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/signup',
+  'app/home',
+  'app/login',
+  'app/password',
+  'app/logout',
   /** @cli-barrel */
 ];
 
@@ -50,7 +55,8 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
+    'angular2-jwt': 'node_modules/angular2-jwt'
   },
   packages: cliSystemConfigPackages
 });

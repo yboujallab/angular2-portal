@@ -4,17 +4,20 @@
   <meta charset="utf-8">
   <title>HcPortal</title>
   <base href="/">
-
   {{#unless environment.production}}
   <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
   {{/unless}}
+  <!-- 1. Load libraries -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="app/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<!--<link  href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
 </head>
 <body>
-  <app-root>Loading...</app-root>
-
-  
+  <div class="container">
+       <app-root>Loading...</app-root>
+    </div>
 
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
@@ -24,8 +27,6 @@
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
-
-  
 
 </body>
 </html>
