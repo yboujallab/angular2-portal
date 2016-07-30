@@ -1,5 +1,5 @@
 import { Injectable }    from '@angular/core';
-import { Headers, Http,  } from '@angular/http';
+import { Headers, Http  } from '@angular/http';
 import { User } from './user';
 import { Token } from '../objects/token';
 import { SignInEndPoint } from '../objects/end.point.uris';
@@ -8,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class LoginService {
 private loggedIn = false;
-
+redirectUrl: string;
 token : Token;
 
 constructor(private http: Http) {
@@ -23,7 +23,7 @@ authenticate(user) {
   headers.append('Accept-Language', 'en');
   headers.append('api_key', 'THIS_IS_THE_API_KEY_OF_THE_MOBILE_APP');
 
-    return this.http
+  return this.http
      .post(SignInEndPoint, JSON.stringify(user), {headers: headers})
      .toPromise()
      .then(response => {
@@ -34,7 +34,7 @@ authenticate(user) {
 }
 
 private handleError(error: any) {
-return Promise.reject(error);
+    return Promise.reject(error);
 }
 
 logout() {

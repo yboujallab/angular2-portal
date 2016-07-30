@@ -15,7 +15,6 @@ import { ErrorsUtilService } from '../shared/errors.service';
   directives: [ROUTER_DIRECTIVES]
 })
 export class LoginComponent implements OnInit {
-//@Input() token : Token;
 user: User;
 error: any;
 token : Token;
@@ -26,23 +25,25 @@ constructor(
     private errorsUtilService:ErrorsUtilService) { }
 
   ngOnInit() {
-  this.user = new User();
-  //this.token = new Token();
+    this.user = new User();
   }
 
   signin(event){
     this.loginService
          .authenticate(this.user)
          .then(res => {
-            // localStorage.setItem('auth_token', token.access_token);
-             this.goToHomePage();
+             let redirect = this.loginService.redirectUrl ? this.goToRequestedPage(this.loginService.redirectUrl) : this.goToHomePage();
           })
          .catch(error => this.error = this.errorsUtilService.getAuthenticationErrorMsg(error));
    }
 
    goToHomePage(){
-   let link = ['/home'];
-   this.router.navigate(link);
+     let link = ['/home'];
+     this.router.navigate(link);
+   }
+
+   goToRequestedPage(redirectUrl){
+     this.router.navigate([redirectUrl]);
    }
 
    goToForgotPassword(){

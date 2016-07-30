@@ -11,14 +11,11 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   directives: [ROUTER_DIRECTIVES]
 })
 
-
 export class HomeComponent implements OnInit {
-token : Token;
+
   constructor() {}
 
   ngOnInit() {
-   this.token = localStorage.getItem('auth_token');
-      console.log(this.token);
   }
 
 
