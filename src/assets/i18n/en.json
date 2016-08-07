@@ -1,0 +1,19 @@
+{
+    "TITLE": "Hawala Care Portal",
+    "LOGINTITLE": "Agent Portal - Login Page",
+    "PWDFORGOT": "Forgot password",
+    "REMEMBER" : "Remember Me",
+    "LOGIN" : "Signin",
+    "USERNAME" : "username",
+    "PASSWORD" : "password",
+    "WELCOMEMSG" : "Welcome to Hawala Care",
+    "LOGOUT" : "Logout",
+    "HOME" : "HOME",
+    "SENDMONEY": "Send Money",
+    "RECEIVEMONEY": "receive Money",
+    "WITHDRAWCASH" : "Withdraww cash",
+    "TRUSTEDCUSTOMERS" : "Trusted Customers",
+    "PREFERREDAGENTS" : "Preferred Agents",
+    "PAYMENTS" : "Payments",
+    "REPORTS" : "Reports"
+}

@@ -4,26 +4,29 @@
     data-fv-icon-invalid="glyphicon glyphicon-remove"
     data-fv-icon-validating="glyphicon glyphicon-refresh"
   (submit)="signin($event)">
+  <h1>
+  	{{'TITLE' | translate}}
+  </h1>
 		<div class="row">
 			<div class="col-sm-6 col-md-4 col-md-offset-4">
-				<h2 class="text-center">Agent Portal - Login page</h2>
+				<h2 class="text-center">{{'LOGINTITLE' | translate}} </h2>
 				<div *ngIf="error" class="alert alert-danger">
  					{{error}}
 				</div>
 				<div class="account-wall">
 						<input type="text" name='username' class="form-control"
-							[(ngModel)]="user.phone_number" placeholder="Username" required autofocus>
+							[(ngModel)]="user.phone_number" placeholder="{{'USERNAME' | translate}}" required autofocus>
 						<br />
 						<input
 							type="password" name='password' class="form-control"
-							[(ngModel)]="user.password"  placeholder="Password" required>
+							[(ngModel)]="user.password"  placeholder="{{'PASSWORD' | translate}}" required>
 							<br />
 						<button class="btn btn-lg btn-primary btn-block" type="submit" >
-							Sign in</button>
+							{{'LOGIN' | translate}}</button>
 						<label class="checkbox pull-left"> <input type="checkbox"
-							value="remember-me"> Remember me
+							value="remember-me"> {{'REMEMBER' | translate}}
 						</label>
-						<a class="pull-right need-help" [routerLink]="['/forgot']" routerLinkActive="active">Forgot password ?</a>
+						<a class="pull-right need-help" [routerLink]="['/forgot']" routerLinkActive="active">{{'PWDFORGOT' | translate}}?</a>
 				</div>
 			</div>
 		</div>

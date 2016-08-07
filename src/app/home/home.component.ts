@@ -1,14 +1,14 @@
 import { provideRouter, RouterConfig }  from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 import { Token } from '../objects/token';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import  {MenuComponent} from '../menu/menu.component'
 
 @Component({
   moduleId: module.id,
   selector: 'app-home',
   templateUrl: 'home.component.html',
   styleUrls: ['home.component.css'],
-  directives: [ROUTER_DIRECTIVES]
+  directives: [MenuComponent]
 })
 
 export class HomeComponent implements OnInit {

@@ -39,10 +39,16 @@ const barrels: string[] = [
   'app/login',
   'app/password',
   'app/logout',
+  'app/layouts',
+  'app/menu',
+  'app/images'
   /** @cli-barrel */
 ];
 
-const cliSystemConfigPackages: any = {};
+const cliSystemConfigPackages: any = {
+'ng2-translate': {
+defaultExtension: 'js'
+}};
 barrels.forEach((barrelName: string) => {
   cliSystemConfigPackages[barrelName] = { main: 'index' };
 });
@@ -56,7 +62,8 @@ System.config({
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
     'main': 'main.js',
-    'angular2-jwt': 'node_modules/angular2-jwt'
+    'angular2-jwt': 'node_modules/angular2-jwt',
+    'ng2-translate': 'vendor/ng2-translate'
   },
   packages: cliSystemConfigPackages
 });

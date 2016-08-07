@@ -1,17 +1,16 @@
 import { Injectable }    from '@angular/core';
 import { Headers, Http  } from '@angular/http';
 import { User } from './user';
-import { Token } from '../objects/token';
 import { SignInEndPoint } from '../objects/end.point.uris';
 import 'rxjs/add/operator/toPromise';
+import {TranslateService} from 'ng2-translate/ng2-translate';
 
 @Injectable()
 export class LoginService {
 private loggedIn = false;
 redirectUrl: string;
-token : Token;
 
-constructor(private http: Http) {
+constructor(private http: Http, private translate: TranslateService) {
      this.loggedIn = !!localStorage.getItem('auth_token');
 
  }
@@ -20,7 +19,7 @@ authenticate(user) {
   var headers = new Headers();
   var res ;
   headers.append('Content-Type', 'application/json');
-  headers.append('Accept-Language', 'en');
+  headers.append('Accept-Language', this.translate.currentLang);
   headers.append('api_key', 'THIS_IS_THE_API_KEY_OF_THE_MOBILE_APP');
 
   return this.http

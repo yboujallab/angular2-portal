@@ -1,0 +1,19 @@
+{
+    "TITLE": "Hawala Care",
+    "LOGINTITLE": "Portail des Agents, page d'authentification",
+    "PWDFORGOT": "Mot de passe oublié",
+    "REMEMBER" : "Se souvenir de moi",
+    "LOGIN" : "Se connecter",
+    "USERNAME" : "nom d'utilisateur",
+    "PASSWORD" : "mot de passe",
+    "WELCOMEMSG" : "Bienvenu sur Hawala Care",
+    "LOGOUT" : "Se déconnecter",
+    "HOME" : "Accueil",
+    "SENDMONEY": "Envoi d'argent",
+    "RECEIVEMONEY": "Transfers reçus",
+    "WITHDRAWCASH" : "Retraits",
+    "TRUSTEDCUSTOMERS" : "Mes Clients",
+    "PREFERREDAGENTS" : "Agents partenaires",
+    "PAYMENTS" : "Paiments",
+    "REPORTS" : "Rapports d'activité"
+}

@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { LoginService } from './login.service';
 import { User } from './user';
-import { Token } from '../objects/token';
 import { NgForm }    from '@angular/forms';
 import { ErrorsUtilService } from '../shared/errors.service';
 
@@ -17,7 +16,6 @@ import { ErrorsUtilService } from '../shared/errors.service';
 export class LoginComponent implements OnInit {
 user: User;
 error: any;
-token : Token;
 
 constructor(
     private loginService: LoginService,
@@ -26,6 +24,7 @@ constructor(
 
   ngOnInit() {
     this.user = new User();
+    if (this.loginService.isLoggedIn()) { this.goToHomePage();}
   }
 
   signin(event){
