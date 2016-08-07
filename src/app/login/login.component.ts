@@ -37,7 +37,7 @@ constructor(
    }
 
    goToHomePage(){
-     let link = ['/home'];
+     let link = ['/dashboard'];
      this.router.navigate(link);
    }
 

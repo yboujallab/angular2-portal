@@ -4,11 +4,10 @@
   </h1>
 </div>
 <div align="right">
-  <a [routerLink]="['/']" routerLinkActive="active" > <img height="30" width="30" src="images/mail.png" /></a>
-  <a [routerLink]="['/logout']" routerLinkActive="active" > <img height="30" width="30" src="images/settings.png" alt="{{'LOGOUT' | translate}}" /></a>
+  <a [routerLink]="['/dashboard']" routerLinkActive="active" > <img height="30" width="30" src="images/mail.png" /></a>
+  <a [routerLink]="['/dashboard']" routerLinkActive="active" > <img height="30" width="30" src="images/settings.png" alt="{{'LOGOUT' | translate}}" /></a>
   <a [routerLink]="['/logout']" routerLinkActive="active" > <img height="30" width="30" src="images/logout.png" alt="{{'LOGOUT' | translate}}" /></a>
 </div>
-
 <div>
 <p>
  {{'WELCOMEMSG' | translate:{gender: "Mr", name : "Bernard"} }}
@@ -17,12 +16,13 @@
 </ul>
 </div>
 <nav class="navbar navbar-default">
-  <a [routerLink]="['/home']" routerLinkActive="active" class="navbar-brand">{{'HOME' | translate}}</a>
-  <a [routerLink]="['/home']" routerLinkActive="active" class="navbar-brand">{{'SENDMONEY' | translate}}</a>
-  <a [routerLink]="['/home']" routerLinkActive="active" class="navbar-brand">{{'RECEIVEMONEY' | translate}}</a>
-  <a [routerLink]="['/home']" routerLinkActive="active" class="navbar-brand">{{'WITHDRAWCASH' | translate}}</a>
-  <a [routerLink]="['/home']" routerLinkActive="active" class="navbar-brand">{{'TRUSTEDCUSTOMERS' | translate}}</a>
-  <a [routerLink]="['/home']" routerLinkActive="active" class="navbar-brand">{{'PREFERREDAGENTS' | translate}}</a>
-  <a [routerLink]="['/home']" routerLinkActive="active" class="navbar-brand">{{'PAYMENTS' | translate}}</a>
-  <a [routerLink]="['/forgot']" routerLinkActive="active" class="navbar-brand">{{'REPORTS' | translate}}</a>
+  <a [routerLink]="['home']" class="navbar-brand">{{'HOME' | translate}}</a>
+  <a [routerLink]="['sendmoney']"  class="navbar-brand">{{'SENDMONEY' | translate}}</a>
+<a [routerLink]="['home']"  class="navbar-brand">{{'RECEIVEMONEY' | translate}}</a>
+<a [routerLink]="['home']"  class="navbar-brand">{{'WITHDRAWCASH' | translate}}</a>
+<a [routerLink]="['home']"  class="navbar-brand">{{'TRUSTEDCUSTOMERS' | translate}}</a>
+<a [routerLink]="['home']"  class="navbar-brand">{{'PREFERREDAGENTS' | translate}}</a>
+<a [routerLink]="['home']"  class="navbar-brand">{{'PAYMENTS' | translate}}</a>
+<a [routerLink]="['home']"  class="navbar-brand">{{'REPORTS' | translate}}</a>
 </nav>
+<router-outlet></router-outlet>

@@ -5,17 +5,17 @@ import { CanActivate, Router,
 import { LoginService } from './login.service';
 
 @Injectable()
-export class LoggedInGuard implements CanActivate {
+export class LogInGuard implements CanActivate {
 
   constructor(private loginService: LoginService, private router: Router) {}
 
   canActivate() {
-  if (localStorage.getItem('auth_token')) { return true; }
-
-  // Navigate to the login page
-  this.router.navigate(['/']);
+  if (localStorage.getItem('auth_token')) {
+    this.router.navigate(['/dashboard']);
     return false;
   }
-
-
+  // Navigate to the login page
+  this.router.navigate(['/']);
+  return true;
+  }
 }

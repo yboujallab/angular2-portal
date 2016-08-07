@@ -2,12 +2,12 @@ import { provideRouter, RouterConfig }  from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { PasswordComponent } from '../password/password.component';
 import { LogoutComponent } from '../logout/logout.component';
+import { LogInGuard } from '../login/login.guard';
 
 export const  commonRoutes: RouterConfig = [
   {
     path: '',
-    component: LoginComponent,
-    terminal: true
+    component: LoginComponent
   },
   {
     path: 'forgot',
