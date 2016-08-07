@@ -6,7 +6,7 @@
     "LOGIN" : "Se connecter",
     "USERNAME" : "nom d'utilisateur",
     "PASSWORD" : "mot de passe",
-    "WELCOMEMSG" : "Bienvenu sur Hawala Care",
+    "WELCOMEMSG" : "Bienvenu  {{gender}}  {{name}} sur Hawala Care",
     "LOGOUT" : "Se déconnecter",
     "HOME" : "Accueil",
     "SENDMONEY": "Envoi d'argent",
