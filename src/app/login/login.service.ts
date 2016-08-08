@@ -12,7 +12,6 @@ redirectUrl: string;
 
 constructor(private http: Http, private translate: TranslateService) {
      this.loggedIn = !!localStorage.getItem('auth_token');
-
  }
 
 authenticate(user) {

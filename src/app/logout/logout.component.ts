@@ -22,7 +22,7 @@ export class LogoutComponent implements OnInit {
   }
 
   goToLoginPage(){
-      let link = [''];
+      let link = ['/login'];
       this.router.navigate(link);
   }
 

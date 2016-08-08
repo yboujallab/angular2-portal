@@ -9,11 +9,14 @@ export class LoggedInGuard implements CanActivate {
 
   constructor(private loginService: LoginService, private router: Router) {}
 
-  canActivate() {
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
   if (localStorage.getItem('auth_token')) { return true; }
 
+  //we store the original url requested
+  this.loginService.redirectUrl = state.url;
+
   // Navigate to the login page
-  this.router.navigate(['/']);
+  this.router.navigate(['/login']);
     return false;
   }
 

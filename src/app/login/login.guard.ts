@@ -10,12 +10,17 @@ export class LogInGuard implements CanActivate {
   constructor(private loginService: LoginService, private router: Router) {}
 
   canActivate() {
-  if (localStorage.getItem('auth_token')) {
+  console.log("begin");
+
+    if (localStorage.getItem('auth_token'))  {
     this.router.navigate(['/dashboard']);
+    console.log("false");
     return false;
   }
+
+  console.log("true");
   // Navigate to the login page
-  this.router.navigate(['/']);
+  //this.router.navigate(['/login']);
   return true;
   }
 }

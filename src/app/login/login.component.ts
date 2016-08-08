@@ -1,9 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, OnDestroy, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, provideRouter, RouterConfig  } from '@angular/router';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { LoginService } from './login.service';
 import { User } from './user';
-import { NgForm }    from '@angular/forms';
 import { ErrorsUtilService } from '../shared/errors.service';
 
 @Component({
@@ -24,14 +23,13 @@ constructor(
 
   ngOnInit() {
     this.user = new User();
-    if (this.loginService.isLoggedIn()) { this.goToHomePage();}
   }
 
   signin(event){
     this.loginService
          .authenticate(this.user)
          .then(res => {
-             let redirect = this.loginService.redirectUrl ? this.goToRequestedPage(this.loginService.redirectUrl) : this.goToHomePage();
+              let redirect = this.loginService.redirectUrl ? this.goToRequestedPage(this.loginService.redirectUrl) : this.goToHomePage();
           })
          .catch(error => this.error = this.errorsUtilService.getAuthenticationErrorMsg(error));
    }

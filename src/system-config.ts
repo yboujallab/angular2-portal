@@ -11,6 +11,11 @@ const map: any = {
 
 /** User packages configuration. */
 const packages: any = {
+'ng2-bootstrap': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'ng2-bootstrap.js'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -63,7 +68,8 @@ System.config({
     'rxjs': 'vendor/rxjs',
     'main': 'main.js',
     'angular2-jwt': 'node_modules/angular2-jwt',
-    'ng2-translate': 'vendor/ng2-translate'
+    'ng2-translate': 'vendor/ng2-translate',
+    'ng2-bootstrap': 'vendor/ng2-bootstrap'
   },
   packages: cliSystemConfigPackages
 });
