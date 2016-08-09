@@ -6,7 +6,7 @@
     "LOGIN" : "Signin",
     "USERNAME" : "username",
     "PASSWORD" : "password",
-    "WELCOMEMSG" : "Welcome to Hawala Care",
+    "WELCOMEMSG" : "Welcome {{gender}}  {{name}} to Hawala Care",
     "LOGOUT" : "Logout",
     "HOME" : "HOME",
     "SENDMONEY": "Send Money",
@@ -15,5 +15,6 @@
     "TRUSTEDCUSTOMERS" : "Trusted Customers",
     "PREFERREDAGENTS" : "Preferred Agents",
     "PAYMENTS" : "Payments",
-    "REPORTS" : "Reports"
+    "REPORTS" : "Reports",
+    "LASTSUCCESSLOGIN" : "Last Successful login : {{timestamp}}"
 }

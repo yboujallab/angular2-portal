@@ -15,5 +15,6 @@
     "TRUSTEDCUSTOMERS" : "Mes Clients",
     "PREFERREDAGENTS" : "Agents partenaires",
     "PAYMENTS" : "Paiments",
-    "REPORTS" : "Rapports d'activité"
+    "REPORTS" : "Rapports d'activité",
+    "LASTSUCCESSLOGIN" : "Derniére conexion le : {{timestamp}}"
 }

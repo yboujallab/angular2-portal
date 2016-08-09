@@ -1,23 +1,29 @@
-<div class="page-header">
-<div align="left">  <h1>
-    {{'TITLE' | translate}}
-  </h1>
-</div>
-<div align="right">
-  <a [routerLink]="['/dashboard']" routerLinkActive="active" > <img height="30" width="30" src="images/mail.png" /></a>
-  <a [routerLink]="['/dashboard']" routerLinkActive="active" > <img height="30" width="30" src="images/settings.png" alt="{{'LOGOUT' | translate}}" /></a>
-  <a [routerLink]="['/logout']" routerLinkActive="active" > <img height="30" width="30" src="images/logout.png" alt="{{'LOGOUT' | translate}}" /></a>
+
+<div class="container page-header">
+    <div class="row">
+        <div class="col-xs-6" align="left">
+            <a [routerLink]="['/dashboard']" routerLinkActive="active" >   <img height="100" width="150" src="images/logo.png" /></a>
+        </div>
+        <div class="col-xs-6" align="right">
+          <a [routerLink]="['/dashboard']" routerLinkActive="active" > <img height="30" width="30" src="images/mail.png" /></a>
+          <a [routerLink]="['/dashboard']" routerLinkActive="active" > <img height="30" width="30" src="images/settings.png" alt="{{'LOGOUT' | translate}}" /></a>
+          <a [routerLink]="['/logout']" routerLinkActive="active" > <img height="30" width="30" src="images/logout.png" alt="{{'LOGOUT' | translate}}" /></a>
+        </div>
+    </div>
 </div>
 <div>
-<p>
- {{'WELCOMEMSG' | translate:{gender: "Mr", name : "Bernard"} }}
-</p>
-<ul>
-</ul>
+  <p>
+   {{'WELCOMEMSG' | translate:{gender: "Mr", name : "Bernard"} }}
+  </p>
+</div>
+<div>
+  <p>
+   {{'LASTSUCCESSLOGIN' | translate:{timestamp: timestamp | date:"MM/dd/yy HH:MM:ss" }  }}
+  </p>
 </div>
 <nav class="navbar navbar-default">
-  <a [routerLink]="['home']" class="navbar-brand">{{'HOME' | translate}}</a>
-  <a [routerLink]="['sendmoney']"  class="navbar-brand">{{'SENDMONEY' | translate}}</a>
+<a [routerLink]="['home']" class="navbar-brand">{{'HOME' | translate}}</a>
+<a [routerLink]="['sendmoney']"  class="navbar-brand">{{'SENDMONEY' | translate}}</a>
 <a [routerLink]="['home']"  class="navbar-brand">{{'RECEIVEMONEY' | translate}}</a>
 <a [routerLink]="['home']"  class="navbar-brand">{{'WITHDRAWCASH' | translate}}</a>
 <a [routerLink]="['home']"  class="navbar-brand">{{'TRUSTEDCUSTOMERS' | translate}}</a>

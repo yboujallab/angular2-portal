@@ -10,9 +10,14 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   directives: [ROUTER_DIRECTIVES]
 
 })
-export class MenuComponent  {
-
+export class MenuComponent implements OnInit  {
+ timestamp : Date;
 
 constructor() {}
+
+ngOnInit() {
+  this.timestamp = new Date();
+  
+}
 
 }

@@ -3,12 +3,15 @@
     data-fv-icon-valid="glyphicon glyphicon-ok"
     data-fv-icon-invalid="glyphicon glyphicon-remove"
     data-fv-icon-validating="glyphicon glyphicon-refresh"
-  (submit)="signin($event)">
-  <h1>
-  	{{'TITLE' | translate}}
-  </h1>
-		<div class="row">
-			<div class="col-sm-6 col-md-4 col-md-offset-4">
+  (submit)="signin($event)" class="center_div">
+  <div class="container" >
+		<div class="row ">
+      <div class="col-xs-6" align="center">
+          <h1>
+            <img height="250" width="250" src="images/logo.png" />
+          </h1>
+        </div>
+			<div class="col-sm-6 col-md-4">
 				<h2 class="text-center">{{'LOGINTITLE' | translate}} </h2>
 				<div *ngIf="error" class="alert alert-danger">
  					{{error}}
@@ -29,5 +32,6 @@
 						<a class="pull-right need-help" [routerLink]="['/forgot']" routerLinkActive="active">{{'PWDFORGOT' | translate}}?</a>
 				</div>
 			</div>
+    </div>
 		</div>
 </form>
